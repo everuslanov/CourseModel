@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "Вопрос #2",
+      "text": "Как дела?",
+      "responses": [
+        {
+          "id": 1,
+          "text": "Отлично"
+        },
+        {
+          "id": 2,
+          "text": "Нормально"
+        }
+      ],
+      "next": {
+        "1": 2,
+        "2": 3
+      }
+    },
+    {
+      "id": 2,
+      "title": "Вопрос #1",
+      "text": "Как дела?",
+      "responses": [
+        {
+          "id": 1,
+          "text": "Отлично"
+        },
+        {
+          "id": 2,
+          "text": "Отлично"
+        }
+      ],
+      "next": {
+        "1": 3,
+        "2": 3
+      }
+    },
+    {
+      "id": 3,
+      "title": "Вопрос #1",
+      "text": "Как дела?",
+      "responses": [
+        {
+          "id": 1,
+          "text": "Отлично"
+        },
+        {
+          "id": 2,
+          "text": "Нормально"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": {
+        "subwoofer": "Sundown Audio",
+        "head": "Sony",
+        "front": "Front",
+        "power": "усь",
+        "summary": 14000
+      },
+      "requirements": [
+        {
+          "question_id": 1,
+          "response_id": 1
+        },
+        {
+          "question_id": 2,
+          "response_id": 1
+        },
+        {
+          "question_id": 3,
+          "response_id": 1
+        }
+      ]
+    }
+  ]
+}

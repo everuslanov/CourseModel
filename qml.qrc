@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/OnboardingPage.qml</file>
+        <file>qml/UI.qml</file>
+        <file>qml/BasePage.qml</file>
+        <file>qml/assets/car_audio.gif</file>
+        <file>qml/QuestionPage.qml</file>
+        <file>qml/ResultPage.qml</file>
+        <file>qml/assets/progra_logo.png</file>
+        <file>qml/PageHeader.qml</file>
+        <file>qml/assets/onboarding_1.png</file>
+        <file>qml/assets/onboarding_2.png</file>
+        <file>qml/assets/onboarding_3.png</file>
+        <file>qml/assets/result.jpeg</file>
+    </qresource>
+</RCC>
