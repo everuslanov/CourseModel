@@ -113,10 +113,11 @@ ApplicationWindow {
     }
 
     Connections {
-        property Item rootPage: null
-
         target: swipeView.currentItem
         onNext: {
+            console.log(_pagesModel)
+            console.log(_pagesModel.rootPage)
+            console.log(_decisionResolver)
             if (responseIndex == 4) {
                 swipeView.push(questionPage, {
                                    "view": swipeView,
@@ -137,16 +138,22 @@ ApplicationWindow {
             }
 
             var nextPage = _pagesModel.page(swipeView.currentItem.nextQuestions[responseIndex])
+            var responseObject = JSON.parse('{"' + swipeView.currentItem.id + '":' + responseIndex + '}');
 
-            var responseObject = JSON.parse('{"'+swipeView.currentItem.id+'":'+responseIndex+'}');
             swipeView.responsesArray.push(responseObject)
 
             if (!nextPage) {
+                var decision = _decisionResolver.resolveDecision(swipeView.responsesArray);
+                swipeView.responsesArray = []
                 swipeView.push(resultPage, {
                                    "view": swipeView,
-                                   "decision":  _decisionResolver.resolveDecision(swipeView.responsesArray)
+                                   "subwoofer": decision.subwoofer,
+                                   "front": decision.front,
+                                   "head": decision.head,
+                                   "power": decision.power,
+                                   "summary": decision.summary
                                })
-                swipeView.responsesArray = []
+                decision = null;
                 return;
             }
 

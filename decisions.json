@@ -1,82 +1,1090 @@
 {
-  "questions": [
-    {
-      "id": 1,
-      "title": "Вопрос #2",
-      "text": "Как дела?",
-      "responses": [
+    "questions": [
         {
-          "id": 1,
-          "text": "Отлично"
+            "id": 1,
+            "title": "О деньгах",
+            "text": "Ваш бюджет?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "> 30 000р."
+                },
+                {
+                    "id": 2,
+                    "text": "< 30 000р."
+                }
+            ],
+            "next": {
+                "1": 2,
+                "2": 3 
+            }
         },
         {
-          "id": 2,
-          "text": "Нормально"
+            "id": 2,
+            "title": "О гарантии",
+            "text": "Ваш автомобиль на гарантии?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }
+            ],
+            "next": {
+                "1": 4,
+                "2": 5 
+            }
+        },
+        {
+            "id": 3,
+            "title": "О звуке",
+            "text": "Какие звуковые частоты Вы предпочитаете больше?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Низкие"
+                },
+                {
+                    "id": 2,
+                    "text": "Средние"
+                },
+                {
+                    "id": 3,
+                    "text": "Высокие"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "О музыке",
+            "text": "Какую музыку Вы чаще всего слушаете в авто?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Инструментальную (сюда входят жанры Фолк, кантри, блюз, ритм-н-блюз, джаз, рок)"
+                },
+                {
+                    "id": 2,
+                    "text": "Электронную (сюда входят хип-хоп вся клубная музыка, дип-хаус, транс, trap и др.)"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "О конструктивных изменениях",
+            "text": "Допускаете ли Вы возможность конструктивных изменений, внесенных в двери, подкапотное пространство и багажник Вашего автомобиля?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }                
+            ],
+            "next": {
+                "1": 6,
+                "2": 7
+            }
+        },
+        {
+            "id": 6,
+            "title": "О кузове автомобиля",
+            "text": "Какой кузов у Вашего авто?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Седан/Хетбчек/Купе/Кабриолет"
+                },
+                {
+                    "id": 2,
+                    "text": "Универсал/Минивэн/Внедорожник/Кроссовер"
+                }                
+            ],
+            "next": {
+                "1": 8,
+                "2": 9
+            }
+        },
+        {
+            "id": 7,
+            "title": "О шумоизоляции",
+            "text": "Как Вы оцениваете шумоизоляцию вашего автомобиля?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Устраивает"
+                },
+                {
+                    "id": 2,
+                    "text": "Не устраивает"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "О громкости",
+            "text": "Как громко Вы предпочитаете слушать музыку?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Громко"
+                },
+                {
+                    "id": 2,
+                    "text": "По настроению"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "О магнитолах",
+            "text": "В Вашем автомобиле штатная магнитола?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }                
+            ],
+            "next": {
+                "1": 12,
+                "2": 13
+            }
+        },
+        {
+            "id": 10,
+            "title": "О багажнике",
+            "text": "Вам важно сохранить полную вместимость багажного отделения?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Важно"
+                },
+                {
+                    "id": 2,
+                    "text": "Не важно"
+                }
+            ],
+            "next": {
+                "2": 14
+            }
+        },
+        {
+            "id": 11,
+            "title": "О багажнике",
+            "text": "Какой примерный объем Вашего багажника?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "> 200 л."
+                },
+                {
+                    "id": 2,
+                    "text": "< 200 л."
+                }
+            ],
+            "next": {
+                "1": 10,
+                "2": 15
+            }
+        },
+        {
+            "id": 12,
+            "title": "О музыке",
+            "text": "Какой элемент в музыке Вам важнее?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Бас"
+                },
+                {
+                    "id": 2,
+                    "text": "Вокал"
+                }
+            ],
+            "next": {
+                "1": 11
+            }
+        },
+        {
+            "id": 13,
+            "title": "О аккумуляторе",
+            "text": "В Вашем автомобиле штатный аккумулятор?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "О звуковом давлении",
+            "text": "Как Вы относитесь к звуковому давлению низких частот?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Нейтрально"
+                },
+                {
+                    "id": 2,
+                    "text": "Не нравится"
+                }
+            ],
+            "next": {
+                "1": 16
+            }
+        },
+        {
+            "id": 15,
+            "title": "О материалах",
+            "text": "Какой материал отделки в Вашем багажном отделении?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Резина"
+                },
+                {
+                    "id": 2,
+                    "text": "Ковролин"
+                },
+                {
+                    "id": 3,
+                    "text": "Кожа/эко-кожа"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "О материалах",
+            "text": "Есть ли у Вас требования к материалам отделки корпуса?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }
+            ],
+            "next": {
+                "1": 17
+            }
+        },
+        {
+            "id": 17,
+            "title": "О материалах",
+            "text": "Какой материал отделки Вы предпочитаете?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Тканевые изделия"
+                },
+                {
+                    "id": 2,
+                    "text": "Кожа"
+                }
+            ],
+            "next": {
+                "2": 18
+            }
+        },
+        {
+            "id": 18,
+            "title": "О экологии",
+            "text": "Беспокоитесь ли Вы об экологии?",
+            "responses": [
+                {
+                    "id": 1,
+                    "text": "Да"
+                },
+                {
+                    "id": 2,
+                    "text": "Нет"
+                }
+            ]
         }
-      ],
-      "next": {
-        "1": 2,
-        "2": 3
-      }
-    },
-    {
-      "id": 2,
-      "title": "Вопрос #1",
-      "text": "Как дела?",
-      "responses": [
+    ],
+    "decisions": [
         {
-          "id": 1,
-          "text": "Отлично"
+            "decision": {
+                "subwoofer": "Machette",
+                "head": "Machette",
+                "front": "Machette",
+                "power": "Machette",
+                "summary": 22000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 3,
+                    "response_id": 1
+                }
+            ]
         },
         {
-          "id": 2,
-          "text": "Отлично"
+            "decision": {
+                "subwoofer": "DS Audio",
+                "head": "DS Audio",
+                "front": "SA Audio",
+                "power": "DS Audio",
+                "summary": 27000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 3,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Focal",
+                "head": "Focal",
+                "front": "Focal",
+                "power": "Focal",
+                "summary": 29000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 3,
+                    "response_id": 3
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Sony",
+                "front": "Pride",
+                "power": "Kicx",
+                "summary": 50000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 4,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Pioneer",
+                "front": "SA Audio",
+                "power": "Focal",
+                "summary": 35000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 4,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "DS Audio",
+                "head": "Celi",
+                "front": "Harman",
+                "power": "Kardon",
+                "summary": 39000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 7,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "VA Audio",
+                "head": "DeAudio",
+                "front": "FAudio",
+                "power": "Kicx",
+                "summary": 58000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 7,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Machette",
+                "head": "Sony",
+                "front": "Ural Sound",
+                "power": "Car Audio",
+                "summary": 70000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Pioneer",
+                "front": "Pioneer",
+                "power": "Harman",
+                "summary": 47000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 14,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Kicx",
+                "head": "Alphard",
+                "front": "Alphard",
+                "power": "SWAT",
+                "summary": 100000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 14,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 16,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 17,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 18,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Alpine",
+                "head": "Alpine",
+                "front": "Alphard",
+                "power": "Loud",
+                "summary": 70000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 14,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 16,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 17,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 18,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Alpine",
+                "front": "SA Audio",
+                "power": "DS Audio",
+                "summary": 44000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 14,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 16,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 17,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Kicx",
+                "head": "Pioneer",
+                "front": "SA Audio",
+                "power": "Pioneer",
+                "summary": 33000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 10,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 14,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 16,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "DS Audio",
+                "head": "Kicker",
+                "front": "SA Audio",
+                "power": "Mystery",
+                "summary": 37000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 15,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "DS Auido",
+                "front": "SA Audio",
+                "power": "Kicker",
+                "summary": 33000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 15,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Alpine",
+                "front": "SA Audio",
+                "power": "Red Audio",
+                "summary": 144000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 11,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 15,
+                    "response_id": 3
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Ural",
+                "front": "Machette",
+                "power": "Kicker",
+                "summary": 39000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 12,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Alpine",
+                "front": "SA Audio",
+                "power": "Ural",
+                "summary": 45000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 13,
+                    "response_id": 1
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "SA Audio",
+                "head": "Alpine",
+                "front": "SA Audio",
+                "power": "Ural",
+                "summary": 45000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 9,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 13,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Hensell",
+                "head": "OL Audio",
+                "front": "Delight Audio",
+                "power": "Loud sound",
+                "summary": 32000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 8,
+                    "response_id": 2
+                }
+            ]
+        },
+        {
+            "decision": {
+                "subwoofer": "Kicka",
+                "head": "Undo",
+                "front": "Ural",
+                "power": "Steel",
+                "summary": 38000
+            },
+            "requirements": [
+                {
+                    "question_id": 1,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 2,
+                    "response_id": 2
+                },
+                {
+                    "question_id": 5,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 6,
+                    "response_id": 1
+                },
+                {
+                    "question_id": 8,
+                    "response_id": 1
+                }
+            ]
         }
-      ],
-      "next": {
-        "1": 3,
-        "2": 3
-      }
-    },
-    {
-      "id": 3,
-      "title": "Вопрос #1",
-      "text": "Как дела?",
-      "responses": [
-        {
-          "id": 1,
-          "text": "Отлично"
-        },
-        {
-          "id": 2,
-          "text": "Нормально"
-        }
-      ]
-    }
-  ],
-  "decisions": [
-    {
-      "decision": {
-        "subwoofer": "Sundown Audio",
-        "head": "Sony",
-        "front": "Front",
-        "power": "усь",
-        "summary": 14000
-      },
-      "requirements": [
-        {
-          "question_id": 1,
-          "response_id": 1
-        },
-        {
-          "question_id": 2,
-          "response_id": 1
-        },
-        {
-          "question_id": 3,
-          "response_id": 1
-        }
-      ]
-    }
-  ]
+    ]
 }

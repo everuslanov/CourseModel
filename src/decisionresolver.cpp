@@ -10,14 +10,14 @@ DecisionResolver::DecisionResolver(QList<QSharedPointer<Decision>> decisions,
     : QObject(parent), decisions_(std::move(decisions)) {}
 
 Decision *DecisionResolver::resolveDecision(QJsonArray map) const {
-  QList<QSharedPointer<Requirement>> responseReqs;
+  QList<Requirement> responseReqs;
   for (auto value : map) {
     auto obj = value.toObject();
-    responseReqs.append(QSharedPointer<Requirement>::create(
-        obj.keys().first().toInt(), obj.value(obj.keys().first()).toInt()));
+    responseReqs.append(Requirement{obj.keys().first().toInt(),
+                                    obj.value(obj.keys().first()).toInt()});
   }
 
-  Decision *resolveDecision = nullptr;
+  int success = 0;
   for (auto decision : decisions_) {
     if (decision->requirements().size() != responseReqs.size())
       continue;
@@ -25,13 +25,17 @@ Decision *DecisionResolver::resolveDecision(QJsonArray map) const {
     int index = -1;
     for (auto requirement : decision->requirements()) {
       ++index;
-      if (requirement->questionID() != responseReqs[index]->questionID() ||
-          requirement->responseID() != responseReqs[index]->responseID()) {
+      if (requirement->questionID() == responseReqs[index].questionID() &&
+          requirement->responseID() == responseReqs[index].responseID()) {
+        success++;
+      } else {
         continue;
       }
     }
-
-    resolveDecision = decision.data();
+    if (success == decision->requirements().size()) {
+      return decision.data();
+    }
+    success = 0;
   }
-  return resolveDecision;
+  return nullptr;
 }

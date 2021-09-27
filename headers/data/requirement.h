@@ -3,11 +3,9 @@
 
 #include <QObject>
 
-class Requirement : public QObject {
-  Q_OBJECT
+class Requirement {
 public:
-  explicit Requirement(int questionID, int responseID,
-                       QObject *parent = nullptr);
+  explicit Requirement(int questionID, int responseID);
 
 public:
   int questionID() const;

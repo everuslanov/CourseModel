@@ -75,11 +75,10 @@ void DecisionsParser::parseDecisions(const QJsonArray &jsonArray) {
     }
 
     auto decisionsObj = obj["decision"].toObject();
-    auto decision = QSharedPointer<Decision>::create(
+
+    decisions_.append(QSharedPointer<Decision>::create(
         decisionsObj["subwoofer"].toString(), decisionsObj["head"].toString(),
         decisionsObj["front"].toString(), decisionsObj["summary"].toDouble(),
-        std::move(requirements), decisionsObj["power"].toString());
-
-    decisions_.append(std::move(decision));
+        std::move(requirements), decisionsObj["power"].toString()));
   }
 }

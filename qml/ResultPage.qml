@@ -6,101 +6,106 @@ import Ui 1.0
 BasePage {
     id: root
 
-    property var decision: null
-    property bool isReady: !!decision
+    property string subwoofer: ""
+    property string front: ""
+    property string head: ""
+    property string power: ""
+    property double summary: 0
 
     background: Qt.darker("#009688", 2)
 
-    Loader {
+    Component.onCompleted: {
+        console.log("COMPLETED! + " + root)
+    }
+
+    Item {
         anchors.fill: parent
-        active: isReady
-        sourceComponent: Item {
-            Column {
-                anchors.centerIn: parent
 
+        Column {
+            anchors.centerIn: parent
+
+            spacing: Ui.dip(10)
+
+            Rectangle {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: resultTextHello.implicitWidth + Ui.dip(20)
+                height: resultTextHello.implicitHeight + Ui.dip(20)
+                radius: Ui.dip(10)
+
+                Text {
+                    id: resultTextHello
+
+                    anchors.centerIn: parent
+                    text: qsTr("Мы думаем вам подойдет данный комплект стоимостью в " + summary + " р.")
+                    font {
+                        family: "Helvetica"
+                        pixelSize: Ui.dipFont(5)
+                    }
+                }
+            }
+
+            Row {
                 spacing: Ui.dip(10)
+                Image {
+                    width: Ui.dip(150)
+                    height: width
+                    source: "qrc:/qml/assets/onboarding_1.png"
+                }
+                Image {
+                    width: Ui.dip(150)
+                    height: width
+                    source: "qrc:/qml/assets/onboarding_2.png"
+                }
+                Image {
+                    width: Ui.dip(150)
+                    height: width
+                    source: "qrc:/qml/assets/onboarding_3.png"
+                }
+            }
 
-                Rectangle {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: resultTextHello.implicitWidth + Ui.dip(20)
-                    height: resultTextHello.implicitHeight + Ui.dip(20)
-                    radius: Ui.dip(10)
+            Rectangle {
+                id: cardContainer
+
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: resultText.implicitWidth + Ui.dip(20)
+                height: resultText.implicitHeight + Ui.dip(20)
+                radius: Ui.dip(10)
+
+                Column {
+                    id: resultText
+                    anchors {
+                        fill: parent
+                        margins: Ui.dip(10)
+                    }
+
+                    spacing: Ui.dip(5)
 
                     Text {
-                        id: resultTextHello
-
-                        anchors.centerIn: parent
-                        text: qsTr("Мы думаем вам подойдет данный комплект стоимостью в " + decision.summary + " р.")
+                        text: qsTr("Сабвуфер: " + subwoofer)
                         font {
                             family: "Helvetica"
                             pixelSize: Ui.dipFont(5)
                         }
                     }
-                }
-
-                Row {
-                    spacing: Ui.dip(10)
-                    Image {
-                        width: Ui.dip(150)
-                        height: width
-                        source: "qrc:/qml/assets/onboarding_1.png"
+                    Text {
+                        text: qsTr("Головное устройство: " + head)
+                        font {
+                            family: "Helvetica"
+                            pixelSize: Ui.dipFont(5)
+                        }
                     }
-                    Image {
-                        width: Ui.dip(150)
-                        height: width
-                        source: "qrc:/qml/assets/onboarding_2.png"
+                    Text {
+                        text: qsTr("Фронтальная акустика: " + front)
+                        font {
+                            family: "Helvetica"
+                            pixelSize: Ui.dipFont(5)
+                        }
                     }
-                    Image {
-                        width: Ui.dip(150)
-                        height: width
-                        source: "qrc:/qml/assets/onboarding_3.png"
-                    }
-                }
-
-                Rectangle {
-                    id: cardContainer
-
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: resultText.implicitWidth + Ui.dip(20)
-                    height: resultText.implicitHeight + Ui.dip(20)
-                    radius: Ui.dip(10)
-
-                    Column {
-                        id: resultText
-                        anchors {
-                            fill: parent
-                            margins: Ui.dip(10)
-                        }
-
-                        spacing: Ui.dip(5)
-
-                        Text {
-                            text: qsTr("Сабвуфер: " + decision.subwoofer)
-                            font {
-                                family: "Helvetica"
-                                pixelSize: Ui.dipFont(5)
-                            }
-                        }
-                        Text {
-                            text: qsTr("Головное устройство: " + decision.head)
-                            font {
-                                family: "Helvetica"
-                                pixelSize: Ui.dipFont(5)
-                            }
-                        }
-                        Text {
-                            text: qsTr("Фронтальная акустика: " + decision.front)
-                            font {
-                                family: "Helvetica"
-                                pixelSize: Ui.dipFont(5)
-                            }
-                        }
-                        Text {
-                            text: qsTr("Усилитель: " + decision.power)
-                            font {
-                                family: "Helvetica"
-                                pixelSize: Ui.dipFont(5)
-                            }
+                    Text {
+                        text: qsTr("Усилитель: " + power)
+                        font {
+                            family: "Helvetica"
+                            pixelSize: Ui.dipFont(5)
                         }
                     }
                 }

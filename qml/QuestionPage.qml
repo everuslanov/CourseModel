@@ -59,8 +59,6 @@ BasePage {
                     SwipeView {
                         id: imgSwipeView
 
-                        property int img_index: 0
-
                         anchors.centerIn: parent
 
                         height: parent.height - Ui.dip(20)
@@ -92,7 +90,6 @@ BasePage {
                             interval: 1000
                             onTriggered: {
                                 if (imgSwipeView.currentIndex < 2) {
-                                    imgSwipeView.img_index++
                                     imgSwipeView.currentIndex++;
                                 } else {
                                     imgSwipeView.currentIndex = 0;
@@ -103,7 +100,7 @@ BasePage {
                 }
 
                 Text {
-                    text: /*title*/"Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1"
+                    text: title
                     color: "black"
                     opacity: 0.8
                     elide: Text.ElideRight
@@ -117,7 +114,7 @@ BasePage {
                 }
 
                 Text {
-                    text: /*textQuestion*/"Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1,Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1,Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1,Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1, Вопрос №1"
+                    text: textQuestion
                     color: "black"
                     opacity: 0.8
                     elide: Text.ElideRight
@@ -186,6 +183,18 @@ BasePage {
             anchors {
                 left: parent.left
                 leftMargin: Ui.dip(10)
+                right: parent.right
+            }
+            contentItem: Text {
+                anchors.left: parent.indicator.right
+                anchors.leftMargin: Ui.dip(5)
+                anchors.right: parent.right
+                anchors.rightMargin: Ui.dip(5)
+                anchors.verticalCenter: parent.indicator.verticalCenter
+                width: parent.width
+                wrapMode: Text.WordWrap
+                elide: Text.ElideRight
+                text: parent.text
             }
 
             text: model.text
@@ -235,8 +244,12 @@ BasePage {
                 radius: Ui.dip(10)
             }
 
-            text: JSON.stringify(nextQuestions) != "{}" ? qsTr("Дальше") : qsTr("Завершить")
+            text: qsTr("Дальше")
             onClicked: root.next(checked_id)
         }
+    }
+
+    Component.onCompleted: {
+        console.log(root)
     }
 }
